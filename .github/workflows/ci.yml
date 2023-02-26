@@ -100,7 +100,7 @@ jobs:
 
   publish:
     needs: finalize
-    if: ${{ github.event_name == 'push' && contains(github.ref, 'refs/tags/') }}
+    if: ${{ github.event_name == 'push' && contains(github.ref, 'refs/tags/') && vars.DEPLOY == 'true' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3

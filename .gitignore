@@ -1,6 +1,8 @@
 lib-id_rsa
 dask-worker-space
 tmp_index
+deploy
+_deploy
 
 # Temporary and binary files
 *~

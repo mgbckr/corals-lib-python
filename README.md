@@ -11,9 +11,7 @@ TO BE PUBLISHED
 ## Install
 
 ```bash
-# TODO: put this on GitHub
-# pip install git+https://github.com/mgbckr/corals-python@main
-pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ corals
+pip install corals
 ```
 
 ## Quick start
@@ -112,7 +110,7 @@ export ENV_NAME=corals
 
 conda create -n ${ENV_NAME} python=3.10
 conda activate ${ENV_NAME}
-pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ corals
+pip install corals
 
 conda install -c conda-forge jupyterlab  # optional if Jupyter Lab is already installed
 conda install -c conda-forge ipykernel
@@ -122,3 +120,16 @@ python -m ipykernel install --user --name ${ENV_NAME}
 ## Development
 
 **TODO**: add documentation for contributing new code / methods
+
+### Setup
+
+```bash
+git clone git@github.com:mgbckr/corals-lib-python.git
+pip install -e .
+```
+
+### Release
+
+```bash
+git tag -a x.x.x -m "Release x.x.x"
+```
