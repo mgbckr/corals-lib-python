@@ -50,8 +50,8 @@ X = np.random.random((n_samples, n_features))
 
 ```python
 # runtime: ~2 sec
-from corals.correlation.full.base import cor_matrix
-cor_values = cor_matrix(X)
+from corals.correlation.full.base import cor_full
+cor_values = cor_full(X)
 ```
 
 ### Top-k correlation matrix computation using Spearman correlation

@@ -117,7 +117,7 @@ def topkdiff_matrix(
     if correlation_type == "spearman":
         spearman = True
     elif correlation_type == "pearson":
-        pass
+        spearman = False
     else:
         raise ValueError("Correlation type must be 'pearson' or 'spearman'.")
 
