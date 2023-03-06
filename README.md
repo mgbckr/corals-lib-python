@@ -16,9 +16,9 @@ pip install corals
 
 ## Quick start
 
-The following quick start examples can also be found in [an executable notebook](docs/notebooks/quickstart.ipynb).
+The following quick start examples can also be found in [an executable notebook](https://github.com/mgbckr/corals-lib-python/tree/main/docs/notebooks/quickstart.ipynb).
 
-**Note:** If any of the following examples do not work, check the [executable notebook](docs/notebooks/quickstart.ipynb) as well. It is tested automatically, and this README may not have been updated.
+**Note:** If any of the following examples do not work, check the [previously mentioned executable notebook](https://github.com/mgbckr/corals-lib-python/tree/main/docs/notebooks/quickstart.ipynb) as well. It is tested automatically, and this `README` may not have been updated.
 
 ### Prepare parallelization
 
@@ -99,7 +99,7 @@ pvalues_corrected = multiple_test_correction(pvalues, n_features, method="fdr_bh
 
 ## Detailed examples
 
-For detailed examples and recommendations, see the corresponding [notebook](docs/notebooks/full.ipynb).
+For detailed examples and recommendations, see the corresponding [notebook](https://github.com/mgbckr/corals-lib-python/tree/main/docs/notebooks/full.ipynb).
 
 The `docs/notebooks` folder may contain additional examples and tutorials in the form of Jupyter Notebooks.
 
