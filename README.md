@@ -5,7 +5,7 @@
 If you use *CorALS* for a scientific publication, please cite:
 
 ```plain
-TO BE PUBLISHED
+Becker, M., Nassar, H., Espinosa, C. et al. Large-scale correlation network construction for unraveling the coordination of complex biological systems. Nat Comput Sci (2023). https://doi.org/10.1038/s43588-023-00429-y
 ```
 
 ## Install
