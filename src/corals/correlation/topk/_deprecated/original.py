@@ -212,7 +212,41 @@ def topk_balltree_combined_tree_parallel_optimized(
         n_jobs_transfer_mode="function",  
         symmetrize=False, 
         argtopk_method="argsort",
-        require_sorted_topk=True):
+        require_sorted_topk=True,
+        handle_zero_variance="raise" # None, "raise", "return indices", 
+    ):
+    
+    if handle_zero_variance is not None:
+        
+        X = np.array(X)
+
+        X_zero_var_msk = np.all(np.isclose(X, X[0,:]), axis=0)
+        X_zero_var_idx = np.arange(X.shape[1])[X_zero_var_msk]
+
+        if handle_zero_variance == "raise":
+            if len(X_zero_var_idx) > 0:
+                raise ValueError(
+                    f"Zero variance in X. Please remove. Indices: {X_zero_var_idx}")
+            
+        if Y is not None:
+
+            Y = np.array(Y)
+
+            Y_zero_var_msk = np.all(np.isclose(Y, Y[0,:]), axis=0)
+            Y_zero_var_idx = np.arange(Y.shape[1])[Y_zero_var_msk]
+
+            if handle_zero_variance == "raise":
+                if len(Y_zero_var_idx) > 0:
+                    raise ValueError(
+                        f"Zero variance in Y. Please remove. Indices: {Y_zero_var_idx}")
+
+        if handle_zero_variance == "return indices":
+
+            if Y is None:
+                return None, X_zero_var_idx
+            else:
+                return None, (X_zero_var_idx, Y_zero_var_idx)
+
 
     if n_jobs is None:
         n_jobs = 1
